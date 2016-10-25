@@ -29,3 +29,21 @@ for c in $cont; do
   fi
   sleep 10
 done
+
+# write-html.py
+
+f = open('music.html','w')
+
+message = """<html>
+<head></head>
+<body><p>Your Music Play List!</p>
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</body>
+</html>"""
+
+f.write(message)
+f.close()
